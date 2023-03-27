@@ -1,43 +1,29 @@
+using Microsoft.EntityFrameworkCore;
+using Movies_API_WS.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<MoviesApiContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("MoviesApiContext")));
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.MapGet("/", () => "Movies Database API - Work Simulation");
 
-app.UseHttpsRedirection();
-
-var summaries = new[]
+app.MapGet("/Movie", (MoviesApiContext context) =>
 {
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
+    return context.Movies.Take(100).ToHashSet<Movie>();
+});
 
-app.MapGet("/weatherforecast", () =>
+app.MapGet("/Customer", (MoviesApiContext context) =>
 {
-    var forecast = Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateTime.Now.AddDays(index),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
-})
-.WithName("GetWeatherForecast");
+    return context.Customers.Take(100).ToHashSet<Customer>();
+});
+
+app.MapGet("/Rating", (MoviesApiContext context) =>
+{
+    return context.Ratings.Take(100).ToHashSet<Rating>();
+});
 
 app.Run();
-
-internal record WeatherForecast(DateTime Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}
