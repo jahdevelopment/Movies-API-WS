@@ -1,0 +1,25 @@
+1|The Shawshank Redemption
+2|The Godfather
+3|The Godfather: Part II
+4|The Dark Knight
+5|12 Angry Men
+6|Schindler's List
+7|The Lord of the Rings: The Return of the King
+8|Pulp Fiction
+9|The Good, the Bad and the Ugly
+10|The Lord of the Rings: The Fellowship of the Ring
+11|Forrest Gump
+12|Fight Club
+13|Inception
+14|The Lord of the Rings: The Two Towers
+15|Star Wars: Episode V - The Empire Strikes Back
+16|The Matrix
+17|Goodfellas
+18|Toy Story
+19|Seven Samurai
+20|Se7en
+21|City of God
+22|The Silence of the Lambs
+23|Harry Potter and the Chamber of Secrets
+24|Harry Potter and the Order of the Phoenix
+25|Life is Beautiful
