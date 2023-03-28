@@ -1,0 +1,25 @@
+1|25|F|Software Engineer
+2|32|M|Teacher
+3|42|M|Lawyer
+4|19|F|Student
+5|28|M|Sales Manager
+6|37|F|Nurse
+7|44|M|Marketing Manager
+8|29|M|Graphic Designer
+9|31|F|Accountant
+10|48|M|Consultant
+11|22|F|Customer Service Representative
+12|39|M|Engineer
+13|27|F|Journalist
+14|36|M|Business Analyst
+15|52|F|Writer
+16|21|M|Student
+17|43|F|HR Manager
+18|30|M|Architect
+19|34|F|Project Manager
+20|45|M|Entrepreneur
+21|26|F|Doctor
+22|40|M|Sales Representative
+23|33|F|Designer
+24|49|M|Executive
+25|23|F|Social Media Manager
